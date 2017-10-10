@@ -53,14 +53,15 @@ Polyglot persistence can apply across an enterprise or within a single applicati
 
 <img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/polyglotecommerce.PNG"/>
 
-<!-- <img src="https://github.com/alamgirqazi/Zenlog/blob/master/app/img/zenlog_register.png" width="200" height="350" /> -->
-
 
 #### Data Storage Needs
 
 The rise of the web as a platform also created a vital factor change in data storage as the need to support large volumes of data by running on clusters.
 Relational databases were not designed to run efficiently on clusters. The data storage needs of an ERP application are lot more different than the data storage needs of a Facebook or an Etsy.
 Ensuring global availability is difficult for relational databases where separate add-ons are required – which increases complexity. The business world is undergoing massive change as industry after industry shifts to the Digital Economy.
+
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/sqlvnosql.PNG"/>
+
  
 #### The Shift to the Digital Economy is Driving NoSQL Adoption
 
@@ -160,10 +161,14 @@ MongoDB is a document store with BSON (extension of JSON) type system. Similar d
 
 MongoDB can store arbitrary deep nested data structures, but cannot search them efficiently. If your data forms a tree, forest or graph, you effectively need to store each node and its edges in a separate document
 
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/tables.PNG"/>
+
  
 A cursor allows you to iterate through the result set. 
 
 The find() function of MongDB returns a cursor object.
+
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/roomsschema.PNG"/>
   
 
 ### MongoDB CRUD Operations
@@ -171,9 +176,12 @@ You can use Mongo shell and write commands on it directly for CRUD operations or
 
 #### Create
 
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/create.PNG"/>
+
  
 #### Read
 
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/readd.PNG"/>
  
 
 In Mongoose
@@ -193,7 +201,11 @@ In Mongoose
 
 #### Delete
  
+ <img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/delete.PNG"/>
+
 #### Update 
+
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/update.PNG"/>
 
 ### MongoDB relationships
 * Embedded Documents
