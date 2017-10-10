@@ -1,6 +1,6 @@
 # Overview of NoSQL Databases and MongoDB
 
-## Link to slides is at [http://slides.com/alamgirqazi/nosql](http://slides.com/alamgirqazi/nosql).
+## Link to slides is at [http://slides.com/alamgirqazi/nosql](http://slides.com/alamgirqazi/nosql)
 
 ### What Is NoSQL
 
@@ -50,6 +50,11 @@ Cloud computing makes this significantly easier, with providers such as Amazon W
 Polyglot Persistence means that when storing data, it is best to use multiple data storage technologies, chosen based upon the way data is being used by individual applications or components of a single application.  Different kinds of data are best dealt with different data stores.  In short, it means picking the right tool for the right use case.  It’s the same idea behind Polyglot Programming, which is the idea that applications should be written in a mix of languages to take advantage of the fact that different languages are suitable for tackling different problems.
 We are entering an era of polyglot persistence, a technique that uses different data storage technologies to handle varying data storage needs.
 Polyglot persistence can apply across an enterprise or within a single application.
+
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/polyglotecommerce.PNG"/>
+
+<!-- <img src="https://github.com/alamgirqazi/Zenlog/blob/master/app/img/zenlog_register.png" width="200" height="350" /> -->
+
 
 #### Data Storage Needs
 
@@ -243,8 +248,18 @@ To
 
 ### MongoDB Aggregation
 
+Aggregation operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function, and single purpose aggregation methods.
 
-### Map Reduce
-Map function is applied on each document to filter our irrelevant documents, and to emit data for all documents of interest. The emitted data is passed in groups to reduce for aggregation.
-Map can be run fully distributed thus allowing analysis of large data sets.
+#### Aggregation Pipeline
+
+MongoDB’s aggregation framework is modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms the documents into an aggregated result.
+The most basic pipeline stages provide filters that operate like queries and document transformations that modify the form of the output document.
+
+#### Map Reduce
+
+Map function is applied on each document to filter our irrelevant documents, and to emit data for all documents of interest. The emitted data is passed in groups to reduce for aggregation.  In general, map-reduce operations have two phases: a map stage that processes each document and emits one or more objects for each input document, and reduce phase that combines the output of the map operation. Optionally, map-reduce can have a finalize stage to make final modifications to the result. Like other aggregation operations, map-reduce can specify a query condition to select the input documents as well as sort and limit the results.
+
+Map-reduce uses custom JavaScript functions to perform the map and reduce operations, as well as the optional finalize operation. While the custom JavaScript provide great flexibility compared to the aggregation pipeline, in general, map-reduce is less efficient and more complex than the aggregation pipeline.
+
+Map can be run fully distributed thus allowing analysis of large data sets. 
 
