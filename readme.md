@@ -176,7 +176,7 @@ You can use Mongo shell and write commands on it directly for CRUD operations or
 
 #### Create
 
-<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/create.PNG"/>
+<img src="https://github.com/alamgirqazi/IntroToNoSQL/blob/master/images/insert.PNG"/>
 
  
 #### Read
