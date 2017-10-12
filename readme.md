@@ -115,9 +115,10 @@ These were created to store and process very large amounts of data distributed o
 
 As RDBMS follows the ACID property, NoSQL databases are “BASE” Systems. The BASE acronym was defined by Eric Brewer, who is also known for formulating the CAP theorem whose properties are used by BASE System.
 The CAP theorem states that a distributed computer system cannot guarantee all of the following three properties at the same time. Eric Brewer put forth the CAP theorem which states that in any distributed system we can choose only two of consistency, availability or partition tolerance. Many NoSQL databases try to provide options where the developer has choices where they can tune the database as per their needs.
-Consistency – once data is written, all future read requests will contain that data
-Availability – the database is always available and responsive
-Partition tolerance – if one part of the database is unavailable, other parts are unaffected.
+
+* Consistency – once data is written, all future read requests will contain that data
+* Availability – the database is always available and responsive
+* Partition tolerance – if one part of the database is unavailable, other parts are unaffected.
 
 
 ### Usage of NoSQL Databases at scale
@@ -152,7 +153,6 @@ MongoDB is a document store with BSON (extension of JSON) type system. Similar d
 * Querying not over HTTP but instead native drivers for each language
 * CP in CAP Theorem
 * No need of serialization in JavaScript as MongoDB understands JSON directly.
-* Individual records can have different fields
 * Schema-free structure
 * Individual records can have different fields
 * Can perform nested queries (more flexible compared to key-value pairs)
@@ -257,21 +257,4 @@ To
                     }
                 ]
     }
-
-### MongoDB Aggregation
-
-Aggregation operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function, and single purpose aggregation methods.
-
-#### Aggregation Pipeline
-
-MongoDB’s aggregation framework is modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms the documents into an aggregated result.
-The most basic pipeline stages provide filters that operate like queries and document transformations that modify the form of the output document.
-
-#### Map Reduce
-
-Map function is applied on each document to filter our irrelevant documents, and to emit data for all documents of interest. The emitted data is passed in groups to reduce for aggregation.  In general, map-reduce operations have two phases: a map stage that processes each document and emits one or more objects for each input document, and reduce phase that combines the output of the map operation. Optionally, map-reduce can have a finalize stage to make final modifications to the result. Like other aggregation operations, map-reduce can specify a query condition to select the input documents as well as sort and limit the results.
-
-Map-reduce uses custom JavaScript functions to perform the map and reduce operations, as well as the optional finalize operation. While the custom JavaScript provide great flexibility compared to the aggregation pipeline, in general, map-reduce is less efficient and more complex than the aggregation pipeline.
-
-Map can be run fully distributed thus allowing analysis of large data sets. 
 
